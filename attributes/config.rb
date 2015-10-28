@@ -61,9 +61,12 @@ default['thumbor']['options']['UPLOAD_PHOTO_STORAGE'] = false
 # STORAGE = 'thumbor.storages.no_storage'
 # STORAGE = 'thumbor.storages.file_storage'
 # STORAGE = 'thumbor.storages.mixed_storage'
-default['thumbor']['options']['STORAGE'] = 'thumbor.storages.no_storage'
+# default['thumbor']['options']['STORAGE'] = 'thumbor.storages.no_storage'
+default['thumbor']['options']['STORAGE'] = 'thumbor_aws.storages.s3_storage'
 
-# default['thumbor']['options']['STORAGE'] = 'thumbor_aws.storages.s3_storage'
+default['thumbor']['options']['AWS_ACCESS_KEY'] = ''
+default['thumbor']['options']['AWS_SECRET_KEY'] = ''
+default['thumbor']['options']['S3_ALLOWED_BUCKETS'] = []
 
 # root path of the file storage
 default['thumbor']['options']['FILE_STORAGE_ROOT_PATH'] = '/var/lib/thumbor/storage'
